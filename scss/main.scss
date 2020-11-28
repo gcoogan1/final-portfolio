@@ -11,7 +11,6 @@ $fontBely: "bely-display", sans-serif;
 $fontBarlow: "Barlow", sans-serif;
 $fontLexend: "Lexend Zetta", sans-serif;
 
-
 //MQ
 @mixin mQ($arg...) {
   @if length($arg) == 1 {
@@ -209,10 +208,10 @@ $fontLexend: "Lexend Zetta", sans-serif;
       display: flex;
       width: 100%;
       justify-content: space-between;
-      .tab{
+      .tab {
         cursor: pointer;
       }
-      .active{
+      .active {
         border-bottom: 2px solid white;
       }
     }
@@ -224,9 +223,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
     font-size: 14px;
   }
 }
-
-
-
 
 //About
 .about {
@@ -327,6 +323,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
     align-items: center;
     justify-items: center;
     flex-wrap: wrap;
+    cursor: pointer;
     @include mQ(600px, 320px) {
       width: 320px;
       height: 260px;
@@ -344,8 +341,37 @@ $fontLexend: "Lexend Zetta", sans-serif;
         width: 155px;
         height: 125px;
       }
+      &:hover{
+        background-color: $black;
+      }
     }
   }
+}
+
+//Change Display On Project Hover
+.hover {
+  display: none;
+}
+.project:hover .hover {
+  display: block;
+  color: $white;
+  font-family: $fontBarlow;
+  background-color: $black;
+  text-align: left;
+  width: 100%;
+  padding-left: 25px;
+  h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    opacity: 0.75;
+  }
+  p {
+    font-size: 16px;
+    opacity: 0.75;
+  }
+}
+.project:hover img {
+  display: none;
 }
 
 //Contact
@@ -453,4 +479,43 @@ $fontLexend: "Lexend Zetta", sans-serif;
       }
     }
   }
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

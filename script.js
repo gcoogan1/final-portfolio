@@ -4,6 +4,9 @@ const about = document.getElementById("about");
 const projects = document.getElementById("projects");
 const tabs = document.getElementById("tabs");
 const tab = tabs.getElementsByClassName("tab");
+const btn = document.getElementsByClassName("click-to-open");
+const spans = document.getElementsByClassName("close");
+
 
 //Change Layout Function
 function changeLayout() {
@@ -37,7 +40,8 @@ function showContact() {
 }
 
 
-// Add active class to the current button to display border 
+
+//Add active class to the current button to display border 
 for (i = 0; i < tab.length; i++) {
   tab[i].addEventListener("click", function() {
   let current = document.getElementsByClassName("active");
@@ -47,5 +51,36 @@ for (i = 0; i < tab.length; i++) {
   this.className += " active";
   });
 }
+
+
+
+//Modal 
+for (i = 0; i < btn.length; i++) {
+  let thisBtn = btn[i];
+  let thisSpan = spans[i]
+  thisBtn.addEventListener("click", function(){
+    //Show Current Modal
+    let modal = document.getElementById(this.dataset.modal);
+    modal.style.display = "block";
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+    // When the user clicks on <span> (x), close the current modal
+    thisSpan.onclick = function() {
+      modal.style.display = "none";
+    }
+}, false)}
+
+
+
+
+
+
+
+
+
 
 

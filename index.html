@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="./scss/main.css">
     <link rel="stylesheet" href="https://use.typekit.net/xyd5aqs.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend+Zetta&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Lexend+Zetta&display=swap" rel="stylesheet">
     <title>Genevieve Coogan</title>
   </head>
   <body>
@@ -58,17 +55,33 @@
     </div>  <div id="projects" class="projects">
         <div class="projects-wrapper">
            <div class="projects">
-             <div class="project">
-              <img src="./assets/Humptys.svg" alt="Humptys" />
-             </div>
-             <div class="project">
-               <img src="./assets/NEP.svg" alt="NEP" />
+             <div  data-modal="modal-window-one" class="project click-to-open" >
+              <img  src="./assets/Humptys.svg" alt="Humptys" />
+              <div class="hover">
+                <h1>Humpty Dumplings</h1>
+                <p>Resturant Website</p>
               </div>
-             <div class="project">
-              <img src="./assets/Feedr.svg" alt="Feedr" />
              </div>
-             <div class="project">
+             <div  data-modal="modal-window-two" class="project click-to-open">
+               <img src="./assets/NEP.svg" alt="NEP" />
+               <div class="hover">
+                <h1>no empty plate</h1>
+                <p>Recipe Manager App</p>
+               </div>
+              </div>
+             <div data-modal="modal-window-three" class="project click-to-open">
+              <img src="./assets/Feedr.svg" alt="Feedr" />
+              <div class="hover">
+                <h1>Feedr</h1>
+                <p>Recipe Finder App</p>
+              </div>
+             </div>
+             <div data-modal="modal-window-four" class="project click-to-open">
                <img src="./assets/Meteor.svg" alt="Meteor" />
+               <div class="hover">
+                <h1>Meteor</h1>
+                <p>Weather App</p>
+              </div>
              </div>
            </div>
         </div>
@@ -88,6 +101,30 @@
            </form>
         </div>
     </div>
+    </div>
+
+    <div id="modal-window-one" class="modal-window modal">
+      <div class="modal-content">
+        <span id="close" class="close">&times;</span>
+        <h1>Humptys</h1>
+      </div>
+    </div>
+    <div id="modal-window-two" class="modal-window modal">
+      <div class="modal-content">
+        <span id="close"  class="close">&times;</span>
+        <h1>NEP</h1>
+      </div>
+    </div>
+    <div id="modal-window-three" class="modal-window modal">
+      <div class="modal-content">
+        <span id="close"  class="close">&times;</span>
+        <h1>Feedr</h1>
+      </div>
+    </div>
+    <div id="modal-window-four" class="modal-window modal">
+      <div class="modal-content">
+        <span id="close"  class="close">&times;</span>
+        <h1>Meteor</h1>
     </div>
     </div>
   
