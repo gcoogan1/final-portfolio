@@ -81,7 +81,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   height: 90vh;
   @include centerPortfolio();
   @include mQ(600px, 320px) {
-    height: 80vh;
+    height: 85vh;
   }
   .portfolio-logo {
     width: 394px;
