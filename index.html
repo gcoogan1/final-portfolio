@@ -1,0 +1,97 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="./scss/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xyd5aqs.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Lexend+Zetta&display=swap"
+      rel="stylesheet"
+    />
+    <title>Genevieve Coogan</title>
+  </head>
+  <body>
+    <div id="hero" class="portfolio-wrapper">
+        <div class="portfolio-logo">
+           <img src="./assets/Logo@2x.png" alt="logo" /> 
+           <div class="portfolio-header">
+             <h2>Genevieve Coogan</g2>
+             <h6>Front-End <span></span> Web Developer</h6>
+           </div>
+        </div>
+    </div>
+    <div id="nav" class="navbar-wrapper">
+      <div class="navbar">
+      <div>  
+        <ul id="tabs">
+          <li class="tab" onClick="showAbout()"><a>About</a></li>
+          <li class="tab" onClick="showProjects()"><a>Projects</a></li>
+          <li class="tab" onClick="showContact()"><a>Contact</a></li>
+        </ul></div>
+    </div>
+    <div id="about" class="about">
+        <div class="about-wrapper">
+            <div class="about-content">
+              <div class="about-text">
+                <p>I’m a Front-End Web Developer based in sunny Philadelphia, PA. 
+                  I enjoy creating intuitive, dynamic user experiences with creative solutions. 
+                  Currently interested in an internship based around React development environment.</p>
+              </div>
+              <div class="about-text-two">
+                <p>My tool belt includes these technologies:</p>
+              </div>
+              <div class="about-toolbelt">
+                <div class="tool-react"><p>React</p></div>
+                <div class="tool-js"><p>JavaScript</p></div>
+                <div class="tool-redux"><p>Redux</p></div>
+                <div class="tool-fb"><p>Firebase</p></div>
+                <div class="tool-mern"><p>MERN Stack</p></div>
+                <div class="tool-scss"><p>SCSS</p></div>
+                <div class="tool-tdd"><p>Test-Driven Development</p></div>
+                <div class="tool-html"><p>HTML</p></div>
+              </div>
+            </div>
+        </div>
+    </div>  <div id="projects" class="projects">
+        <div class="projects-wrapper">
+           <div class="projects">
+             <div class="project">
+              <img src="./assets/Humptys.svg" alt="Humptys" />
+             </div>
+             <div class="project">
+               <img src="./assets/NEP.svg" alt="NEP" />
+              </div>
+             <div class="project">
+              <img src="./assets/Feedr.svg" alt="Feedr" />
+             </div>
+             <div class="project">
+               <img src="./assets/Meteor.svg" alt="Meteor" />
+             </div>
+           </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="contact-wrapper">
+           <form>
+             <p>Interested in working together? Get in touch..</p>
+             <div class="form-contents">
+                <div class="form-inputs">
+                    <input class="margin" type="text" placeholder="Name" name="name">
+                    <input type="email" placeholder="Email" name="email">
+                </div>
+                <textarea type="text" name="message" placeholder="Message" ></textarea>
+             </div>
+             <button type="submit">Send Message</button>
+           </form>
+        </div>
+    </div>
+    </div>
+    </div>
+  
+
+    <script src="script.js"></script>
+  </body>
+</html>

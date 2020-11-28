@@ -1,0 +1,456 @@
+//VARIABLES
+$white: #ffffff;
+$offWhite: #e3e3e3;
+$deepBlue: #00073b;
+$lightBlue: #0075ed;
+$darkGrey: #1f1f1f;
+$grey: #333333;
+$offGrey: #312c2c;
+$black: #000000;
+$fontBely: "bely-display", sans-serif;
+$fontBarlow: "Barlow", sans-serif;
+$fontLexend: "Lexend Zetta", sans-serif;
+
+
+//MQ
+@mixin mQ($arg...) {
+  @if length($arg) == 1 {
+    @media screen and (max-width: nth($arg, 1 )) {
+      @content;
+    }
+  }
+  @if length($arg) == 2 {
+    @media screen and (max-width: nth($arg, 1 )) and (min-width: nth($arg, 2 )) {
+      @content;
+    }
+  }
+}
+//MIXINS
+@mixin centerPortfolio {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $deepBlue;
+}
+@mixin h6Portfolio {
+  font-family: $fontLexend;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 0.75;
+  margin-top: 10px;
+  @include mQ(600px, 320px) {
+    font-size: 12px;
+  }
+}
+@mixin tabsWrapper {
+  width: 100%;
+  height: 40vh;
+  background-color: $darkGrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include mQ(1024px, 601px) {
+    height: 50vh;
+  }
+  @include mQ(600px, 320px) {
+    height: 60vh;
+  }
+}
+@mixin tool {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 10px 0px 0px;
+  flex-wrap: wrap;
+  height: 39px;
+  background-color: $grey;
+  @include mQ(600px, 320px) {
+    height: 37px;
+    margin: 10px 8px 0px 0px;
+  }
+}
+@mixin placeholder {
+  font-family: $fontBarlow;
+  font-size: 16px;
+  color: $white;
+}
+
+//Untouched Navbar --> Hero/Nav Styling
+.portfolio-wrapper {
+  height: 90vh;
+  @include centerPortfolio();
+  .portfolio-logo {
+    width: 394px;
+    height: 411px;
+    padding-top: 20px;
+    @include mQ(600px, 320px) {
+      width: 320px;
+      height: 362px;
+    }
+    img {
+      width: 357px;
+      height: 300px;
+      @include mQ(600px, 320px) {
+        width: 320px;
+        height: 269px;
+      }
+    }
+    .portfolio-header {
+      width: 100%;
+      color: $white;
+      text-align: center;
+      h2 {
+        font-family: $fontBely;
+        font-size: 40px;
+        @include mQ(600px, 320px) {
+          font-size: 36px;
+        }
+      }
+      h6 {
+        @include h6Portfolio();
+      }
+    }
+  }
+}
+.navbar-wrapper {
+  width: 100%;
+  height: 10vh;
+}
+
+//Touched Navbar --> Hero/Nav Styling
+.portfolio-wrapper-two {
+  height: 50vh;
+  @include centerPortfolio();
+  @include mQ(1024px, 601px) {
+    height: 40vh;
+  }
+  @include mQ(600px, 320px) {
+    height: 30vh;
+  }
+  .portfolio-logo {
+    width: 374px;
+    height: 341px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include mQ(1024px, 320px) {
+      width: 318px;
+      height: 84px;
+      display: flex;
+      justify-content: center;
+      flex-direction: row;
+      align-items: center;
+    }
+    img {
+      width: 307px;
+      height: 250px;
+      @include mQ(600px, 320px) {
+        width: 100px;
+        height: 84px;
+      }
+    }
+    .portfolio-header {
+      width: 100%;
+      color: $white;
+      text-align: center;
+      @include mQ(1024px, 320px) {
+        width: 208px;
+        display: flex;
+        flex-direction: column;
+        text-align: inherit;
+        justify-content: center;
+        padding-left: 12px;
+      }
+      h2 {
+        font-family: $fontBely;
+        font-size: 40px;
+        @include mQ(600px, 320px) {
+          font-size: 22px;
+        }
+      }
+      h6 {
+        @include h6Portfolio();
+        span {
+          @include mQ(600px, 320px) {
+            margin-left: 70px;
+          }
+        }
+      }
+    }
+  }
+}
+.navbar-wrapper-two {
+  width: 100%;
+  height: 50vh;
+}
+
+//Navbar
+.navbar {
+  width: 100%;
+  height: 10vh;
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: $fontLexend;
+  div {
+    width: 478px;
+    display: flex;
+    margin-top: 30px;
+    justify-content: center;
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      .tab{
+        cursor: pointer;
+      }
+      .active{
+        border-bottom: 2px solid white;
+      }
+    }
+    @include mQ(600px, 320px) {
+      width: 320px;
+    }
+  }
+  @include mQ(600px, 320px) {
+    font-size: 14px;
+  }
+}
+
+
+
+
+//About
+.about {
+  display: none;
+}
+.about-wrapper {
+  @include tabsWrapper();
+  @include mQ(600px, 320px) {
+    align-items: baseline;
+  }
+  .about-content {
+    width: 645px;
+    height: 214px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $fontBarlow;
+    color: $white;
+    font-size: 16px;
+    @include mQ(600px, 320px) {
+      width: 320px;
+      font-size: 14px;
+      height: 100%;
+      padding-top: 30px;
+    }
+    .about-text {
+      width: 600px;
+      height: 57px;
+      @include mQ(600px, 320px) {
+        width: 320px;
+      }
+    }
+    .about-text-two {
+      width: 600px;
+      padding-top: 30px;
+      @include mQ(600px, 320px) {
+        width: 320px;
+        padding-top: 50px;
+      }
+    }
+
+    .about-toolbelt {
+      width: 600px;
+      height: 108px;
+      display: flex;
+      flex-wrap: wrap;
+      @include mQ(600px, 320px) {
+        width: 320px;
+      }
+      .tool-react {
+        width: 91px;
+        @include tool();
+      }
+      .tool-js {
+        width: 125px;
+        @include tool();
+      }
+      .tool-redux {
+        width: 93px;
+        @include tool();
+      }
+      .tool-fb {
+        width: 111px;
+        @include tool();
+      }
+      .tool-mern {
+        width: 135px;
+        @include tool();
+      }
+      .tool-scss {
+        width: 88px;
+        @include tool();
+      }
+      .tool-tdd {
+        width: 180px;
+        @include tool();
+      }
+      .tool-html {
+        width: 90px;
+        @include tool();
+      }
+    }
+  }
+}
+
+//Portfolio
+.projects {
+  display: none;
+}
+.projects-wrapper {
+  @include tabsWrapper();
+  .projects {
+    width: 600px;
+    height: 260px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+    flex-wrap: wrap;
+    @include mQ(600px, 320px) {
+      width: 320px;
+      height: 260px;
+    }
+    .project {
+      width: 295px;
+      height: 125px;
+      border-radius: 10px;
+      background-color: $grey;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px 10px 10px 0px;
+      @include mQ(600px, 320px) {
+        width: 155px;
+        height: 125px;
+      }
+    }
+  }
+}
+
+//Contact
+.contact {
+  display: none;
+}
+.contact-wrapper {
+  @include tabsWrapper();
+  form {
+    color: $white;
+    font-size: 16px;
+    font-family: $fontBarlow;
+    width: 600px;
+    height: 275px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include mQ(600px, 320px) {
+      width: 295px;
+      height: auto;
+    }
+    p {
+      padding-bottom: 24px;
+    }
+    .form-contents {
+      width: 600px;
+      height: 160px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      @include mQ(600px, 320px) {
+        width: 295px;
+        height: 200px;
+      }
+      .form-inputs {
+        width: 600px;
+        display: flex;
+        justify-content: space-between;
+        @include mQ(600px, 320px) {
+          width: 295px;
+          flex-direction: column;
+        }
+        input {
+          width: 295px;
+          height: 50px;
+          background-color: $grey;
+          border: none;
+          outline: none;
+          text-indent: 5px;
+          &::placeholder {
+            @include placeholder();
+            opacity: 0.5;
+          }
+          &[type="text"] {
+            @include placeholder();
+          }
+          &[type="email"] {
+            @include placeholder();
+          }
+        }
+      }
+      .margin {
+        @include mQ(600px, 320px) {
+          margin-bottom: 12px;
+        }
+      }
+      textarea {
+        width: 600px;
+        height: 100px;
+        background-color: $grey;
+        border: none;
+        outline: none;
+        resize: none;
+        margin-top: 12px;
+        text-indent: 5px;
+        &::placeholder {
+          @include placeholder();
+          opacity: 0.5;
+        }
+        &[type="text"] {
+          @include placeholder();
+        }
+        @include mQ(600px, 320px) {
+          width: 295px;
+          height: 80px;
+        }
+      }
+    }
+    button {
+      width: 225px;
+      height: 60px;
+      background: $lightBlue;
+      color: $white;
+      font-family: $fontBarlow;
+      font-size: 16px;
+      border: none;
+      align-self: center;
+      margin-top: 18px;
+      &:focus {
+        outline: none;
+        box-shadow: none;
+      }
+      @include mQ(600px, 320px) {
+        width: 295px;
+      }
+    }
+  }
+}
