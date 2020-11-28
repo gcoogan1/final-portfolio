@@ -374,8 +374,9 @@
   }
 }
 
-.about-wrapper .about-content .about-toolbelt .tool-react {
-  width: 91px;
+.about-wrapper .about-content .about-toolbelt .tool {
+  padding: 14px 25px 14px;
+  background-color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,190 +387,10 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-react {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-js {
-  width: 125px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-js {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-redux {
-  width: 93px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-redux {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-fb {
-  width: 111px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-fb {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-mern {
-  width: 135px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-mern {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-scss {
-  width: 88px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-scss {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-tdd {
-  width: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-tdd {
-    height: 37px;
-    margin: 10px 8px 0px 0px;
-  }
-}
-
-.about-wrapper .about-content .about-toolbelt .tool-html {
-  width: 90px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 14px 10px 0px 0px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  height: 39px;
-  background-color: #333333;
-}
-
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .about-wrapper .about-content .about-toolbelt .tool-html {
-    height: 37px;
+  .about-wrapper .about-content .about-toolbelt .tool {
     margin: 10px 8px 0px 0px;
   }
 }
@@ -678,9 +499,21 @@
   opacity: 0.75;
 }
 
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .project:hover .hover h1 {
+    font-size: 16px;
+  }
+}
+
 .project:hover .hover p {
   font-size: 16px;
   opacity: 0.75;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .project:hover .hover p {
+    font-size: 12px;
+  }
 }
 
 .project:hover img {
@@ -910,12 +743,6 @@
   margin-top: 18px;
 }
 
-.contact-wrapper form button:focus {
-  outline: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .contact-wrapper form button {
     width: 295px;
@@ -925,49 +752,173 @@
 /* The Modal (background) */
 .modal {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
-  padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: black;
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
+  -webkit-backdrop-filter: blur(50px);
+          backdrop-filter: blur(50px);
+}
+
+.modal .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  width: 400px;
+  height: 631px;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .modal .modal-content {
+    width: 380px;
+    height: 560px;
+    margin: 10% auto;
+  }
+}
+
+.modal .top {
+  background-color: #312c2c;
+  height: 100px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  justify-items: center;
+}
+
+.modal .top .top-logo img {
+  width: 95px;
+  height: 50px;
+}
+
+.modal .top .top-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.modal .top .top-btn button {
+  width: 125px;
+  height: 40px;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Barlow", sans-serif;
+  border: none;
+  background-color: #0075ed;
+}
+
+.modal .middle {
+  background-color: blue;
+  height: 200px;
+  width: 100%;
+}
+
+.modal .middle img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal .bottom {
+  background-color: palevioletred;
+  height: 331px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Barlow", sans-serif;
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .modal .bottom {
+    font-size: 14px;
+  }
+}
+
+.modal .bottom .bottom-content {
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.modal .bottom .bottom-content .bottom-title p {
+  opacity: 0.75;
+}
+
+.modal .bottom .bottom-content .bottom-tech {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal .bottom .bottom-content .bottom-tech .tech {
+  padding: 14px 25px 14px;
+  background-color: #e3e3e3;
+  margin: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 14px 10px 0px 0px;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .modal .bottom .bottom-content .bottom-tech .tech {
+    margin: 10px 8px 0px 0px;
+  }
 }
 
 /* Modal Content/Box */
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  /* Could be more or less, depending on screen size */
-}
-
 /* The Close Button */
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 38px;
   font-weight: bold;
+  position: absolute;
+  right: 30vw;
+}
+
+@media screen and (max-width: 1024px) and (min-width: 320px) {
+  .close {
+    right: 50vw;
+  }
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
 }

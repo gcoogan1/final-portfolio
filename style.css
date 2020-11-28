@@ -12,8 +12,10 @@ body {
   max-height: 100%;
 }
 
-
-
 button {
   cursor: pointer;
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
