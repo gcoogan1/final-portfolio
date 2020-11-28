@@ -5,13 +5,14 @@
 
 body {
   width: 100%;
-  min-height: 100vh;
   min-height: -webkit-fill-available;
+  min-height: -moz-available; /* WebKit-based browsers will ignore this. */
+  min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  min-height: fill-available;
+  max-height: 100%;
 }
 
-html {
-  height: -webkit-fill-available;
-}
+
 
 button {
   cursor: pointer;
