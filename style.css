@@ -3,16 +3,15 @@
   margin: 0;
 }
 
-html
-{
-  -webkit-tap-highlight-color:transparent;
+html {
+  -webkit-tap-highlight-color: transparent;
 }
 
 body {
   width: 100%;
   min-height: -webkit-fill-available;
-  min-height: -moz-available; /* WebKit-based browsers will ignore this. */
-  min-height: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  min-height: -moz-available; 
+  min-height: -webkit-fill-available; 
   min-height: fill-available;
   max-height: 100%;
 }

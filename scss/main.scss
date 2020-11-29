@@ -71,7 +71,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   color: $white;
 }
 
-//Untouched Navbar --> Hero/Nav Styling
+//UNTOUCHED Navbar --> Hero/Nav Styling
 .portfolio-wrapper {
   height: 90%;
   @include centerPortfolio();
@@ -113,7 +113,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   height: 10%;
 }
 
-//Touched Navbar --> Hero/Nav Styling
+//TOUCHED Navbar --> Hero/Nav Styling
 .portfolio-wrapper-two {
   height: 50%;
   @include centerPortfolio();
@@ -180,7 +180,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   height: 50%;
 }
 
-//Navbar
+//-NAVBAR-//
 .navbar {
   width: 100%;
   height: 100%;
@@ -220,7 +220,8 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
 }
 
-//About
+//---->TABS<---//
+//--ABOUT--//
 .about {
   display: none;
 }
@@ -268,7 +269,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
       @include mQ(600px, 320px) {
         width: 320px;
       }
-      .tool{
+      .tool {
         padding: 14px 25px 14px;
         background-color: $grey;
         @include tool();
@@ -276,8 +277,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
     }
   }
 }
-
-//Portfolio
+//--PROJECTS--//
 .projects {
   display: none;
 }
@@ -316,8 +316,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
     }
   }
 }
-
-//Change Display On Project Hover
+// --> (change display on project hover)
 .hover {
   display: none;
 }
@@ -348,8 +347,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
 .project:hover img {
   display: none;
 }
-
-//Contact
+//--CONTACT--//
 .contact {
   display: none;
 }
@@ -452,7 +450,8 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
 }
 
-/* The Modal (background) */
+
+//--->MODAL<---//
 .modal {
   display: none;
   position: fixed;
@@ -461,19 +460,20 @@ $fontLexend: "Lexend Zetta", sans-serif;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
+  max-height: calc(100vh - 20px);
+  overflow-y: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(50px);
   .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 80px auto;
     width: 400px;
     height: 631px;
-    @include mQ(600px, 320px) {
+    @include mQ(768px, 320px) {
       width: 380px;
       height: 560px;
-      margin: 10% auto;
+      margin: 50px auto;
     }
   }
   .top {
@@ -495,10 +495,10 @@ $fontLexend: "Lexend Zetta", sans-serif;
       button {
         width: 125px;
         height: 40px;
+        border: none;
         color: $white;
         font-size: 16px;
         font-family: $fontBarlow;
-        border: none;
         background-color: $lightBlue;
       }
     }
@@ -529,16 +529,16 @@ $fontLexend: "Lexend Zetta", sans-serif;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
-      .bottom-title{
-        p{
+      .bottom-title {
+        p {
           opacity: 0.75;
         }
       }
-      .bottom-tech{
+      .bottom-tech {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        .tech{
+        .tech {
           padding: 14px 25px 14px;
           background-color: $offWhite;
           margin: 5px;
@@ -547,26 +547,20 @@ $fontLexend: "Lexend Zetta", sans-serif;
       }
     }
   }
-}
-
-/* Modal Content/Box */
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 38px;
-  font-weight: bold;
-  position: absolute;
-  right: 30vw;
-  @include mQ(1024px, 320px) {
-    right: 50vw;
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 38px;
+    font-weight: bold;
+    position: absolute;
+    right: 30vw;
+    &:hover {
+      color: $white;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    @include mQ(1024px, 320px) {
+      right: 50vw;
+    }
   }
-}
-
-.close:hover,
-.close:focus {
-  color: $white;
-  text-decoration: none;
-  cursor: pointer;
 }

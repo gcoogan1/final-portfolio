@@ -1,3 +1,4 @@
+//--VARIABLES--//
 const hero = document.getElementById("hero");
 const nav = document.getElementById("nav");
 const about = document.getElementById("about");
@@ -8,15 +9,15 @@ const btn = document.getElementsByClassName("click-to-open");
 const spans = document.getElementsByClassName("close");
 
 
+
+
+
+//--FUCNTIONS--//
 //Change Layout Function
 function changeLayout() {
   hero.classList.remove("portfolio-wrapper");
   hero.classList.add("portfolio-wrapper-two");
-
-  // nav.classList.remove('nav-wrapper');
-  // nav.classList.add('nav-wrapper-two');
 }
-
 //Tab Functions
 function showAbout() {
   changeLayout();
@@ -24,14 +25,12 @@ function showAbout() {
   contact.style.display = "none";
   about.style.display = "block";
 }
-
 function showProjects() {
   changeLayout();
   about.style.display = "none";
   contact.style.display = "none";
   projects.style.display = "block";
 }
-
 function showContact() {
   changeLayout();
   about.style.display = "none";
@@ -40,8 +39,8 @@ function showContact() {
 }
 
 
-
-//Add active class to the current button to display border 
+//--LOOPS--//
+//Add Active Class To The Current Button To Display Border 
 for (i = 0; i < tab.length; i++) {
   tab[i].addEventListener("click", function() {
   let current = document.getElementsByClassName("active");
@@ -51,9 +50,6 @@ for (i = 0; i < tab.length; i++) {
   this.className += " active";
   });
 }
-
-
-
 //Modal 
 for (i = 0; i < btn.length; i++) {
   let thisBtn = btn[i];
