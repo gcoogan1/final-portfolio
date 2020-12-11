@@ -247,17 +247,19 @@ $fontLexend: "Lexend Zetta", sans-serif;
     }
     .about-text {
       width: 600px;
-      height: 57px;
       @include mQ(600px, 320px) {
         width: 320px;
+      }
+      img{
+        width: 30px;
+        height: 30px;
+        margin: 10px 5px;
       }
     }
     .about-text-two {
       width: 600px;
-      padding-top: 30px;
       @include mQ(600px, 320px) {
         width: 320px;
-        padding-top: 50px;
       }
     }
 

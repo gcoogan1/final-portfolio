@@ -337,7 +337,6 @@
 
 .about-wrapper .about-content .about-text {
   width: 600px;
-  height: 57px;
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
@@ -346,15 +345,19 @@
   }
 }
 
+.about-wrapper .about-content .about-text img {
+  width: 30px;
+  height: 30px;
+  margin: 10px 5px;
+}
+
 .about-wrapper .about-content .about-text-two {
   width: 600px;
-  padding-top: 30px;
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .about-wrapper .about-content .about-text-two {
     width: 320px;
-    padding-top: 50px;
   }
 }
 
