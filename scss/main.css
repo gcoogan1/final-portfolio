@@ -97,7 +97,7 @@
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .portfolio-wrapper-two {
-    height: 30%;
+    height: 25%;
   }
 }
 
@@ -296,7 +296,7 @@
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .about-wrapper {
-    height: 60vh;
+    height: 65vh;
   }
 }
 
@@ -310,7 +310,6 @@
 
 .about-wrapper .about-content {
   width: 645px;
-  height: 214px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -425,7 +424,7 @@
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .projects-wrapper {
-    height: 60vh;
+    height: 65vh;
   }
 }
 
@@ -550,7 +549,7 @@
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
   .contact-wrapper {
-    height: 60vh;
+    height: 65vh;
   }
 }
 
