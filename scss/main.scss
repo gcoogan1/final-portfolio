@@ -502,7 +502,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   backdrop-filter: blur(50px);
   .modal-close {
     width: 100%;
-    height: 10px;
+    height: 70px;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -514,7 +514,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
         color: #aaaaaa;
         font-size: 38px;
         font-weight: bold;
-        position: absolute;
         &:hover {
           color: $white;
           text-decoration: none;
@@ -530,11 +529,11 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
   .modal-content {
     background-color: #fefefe;
-    margin: 80px auto;
+    margin: 10px auto 60px auto;
     width: 400px;
     @include mQ(768px, 320px) {
       width: 380px;
-      margin: 50px auto;
+      
     }
   }
   .top {
