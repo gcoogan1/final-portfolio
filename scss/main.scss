@@ -248,11 +248,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
 }
 
-
-
-
 //---->TABS<---//
-
 
 //--ABOUT--//
 .about {
@@ -310,7 +306,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
 }
 
-
 //--PROJECTS--//
 .projects {
   display: none;
@@ -365,7 +360,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   background-color: $black;
   text-align: left;
   width: 100%;
-  padding:0px 25px;
+  padding: 0px 25px;
   h1 {
     font-size: 20px;
     text-transform: uppercase;
@@ -385,7 +380,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
 .project:hover img {
   display: none;
 }
-
 
 //--CONTACT--//
 .contact {
@@ -506,6 +500,34 @@ $fontLexend: "Lexend Zetta", sans-serif;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(50px);
+  .modal-close {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    .modal-x {
+      width: 500px;
+      display: flex;
+      justify-content: flex-end;
+      .close {
+        color: #aaaaaa;
+        font-size: 38px;
+        font-weight: bold;
+        position: absolute;
+        &:hover {
+          color: $white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+        @include mQ(1024px, 320px) {
+        }
+      }
+      @include mQ(768px, 320px) {
+        justify-content: center;
+      }
+    }
+  }
   .modal-content {
     background-color: #fefefe;
     margin: 80px auto;
@@ -589,24 +611,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
           @include tool();
         }
       }
-    }
-  }
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 38px;
-    font-weight: bold;
-    position: absolute;
-    left: 65vw;
-    top: 2vh;
-    &:hover {
-      color: $white;
-      text-decoration: none;
-      cursor: pointer;
-    }
-    @include mQ(1024px, 320px) {
-      left: 50vw;
-      top: 1vh;
     }
   }
 }
