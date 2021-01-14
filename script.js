@@ -17,6 +17,8 @@ const spans = document.getElementsByClassName("close");
 function changeLayout() {
   hero.classList.remove("portfolio-wrapper");
   hero.classList.add("portfolio-wrapper-two");
+  nav.classList.remove("navbar-wrapper");
+  nav.classList.add("navbar-wrapper-two")
 }
 //Tab Functions
 function showAbout() {

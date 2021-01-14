@@ -59,33 +59,35 @@
     </div>  
     <div id="projects" class="projects">
       <div class="projects-wrapper">
-        <div class="projects">
-          <div  data-modal="modal-window-one" class="project click-to-open" >
-            <img  src="./assets/Humptys.svg" alt="Humptys" />
-            <div class="hover">
-              <h1>Humpty Dumplings</h1>
-              <p>Resturant Website</p>
+        <div class="projects-content">
+          <div class="projects">
+            <div  data-modal="modal-window-one" class="project click-to-open" >
+              <img  src="./assets/Humptys.svg" alt="Humptys" />
+              <div class="hover">
+                <h1>Humpty Dumplings</h1>
+                <p>Resturant Website</p>
+              </div>
             </div>
-          </div>
-          <div  data-modal="modal-window-two" class="project click-to-open">
-            <img src="./assets/NEP.svg" alt="NEP" />
-            <div class="hover">
-              <h1>no empty plate</h1>
-              <p>Recipe Manager App</p>
+            <div  data-modal="modal-window-two" class="project click-to-open">
+              <img src="./assets/NEP.svg" alt="NEP" />
+              <div class="hover">
+                <h1>no empty plate</h1>
+                <p>Recipe Manager App</p>
+              </div>
             </div>
-          </div>
-          <div data-modal="modal-window-three" class="project click-to-open">
-            <img src="./assets/Feedr.svg" alt="Feedr" />
-            <div class="hover">
-              <h1>Feedr</h1>
-              <p>Recipe Finder App</p>
+            <div data-modal="modal-window-three" class="project click-to-open">
+              <img src="./assets/Feedr.svg" alt="Feedr" />
+              <div class="hover">
+                <h1>Feedr</h1>
+                <p>Recipe Finder App</p>
+              </div>
             </div>
-          </div>
-          <div data-modal="modal-window-four" class="project click-to-open">
-            <img src="./assets/Meteor.svg" alt="Meteor" />
-            <div class="hover">
-              <h1>Meteor</h1>
-              <p>Weather App</p>
+            <div data-modal="modal-window-four" class="project click-to-open">
+              <img src="./assets/Meteor.svg" alt="Meteor" />
+              <div class="hover">
+                <h1>Meteor</h1>
+                <p>Weather App</p>
+              </div>
             </div>
           </div>
         </div>
@@ -93,17 +95,19 @@
     </div>
     <div id="contact" class="contact">
       <div class="contact-wrapper">
-        <form name="contactMe"  method="POST" netlify >
-          <p>Interested in working together? Get in touch..</p>
-          <div class="form-contents">
-            <div class="form-inputs">
-              <input class="margin" type="text" placeholder="Name" name="name">
-              <input type="email" placeholder="Email" name="email">
+        <div class="contact-content">
+          <form name="contactMe"  method="POST" netlify >
+            <p>Interested in working together? Get in touch..</p>
+            <div class="form-contents">
+              <div class="form-inputs">
+                <input class="margin" type="text" placeholder="Name" name="name">
+                <input type="email" placeholder="Email" name="email">
+              </div>
+              <textarea type="text" name="message" placeholder="Message" ></textarea>
             </div>
-            <textarea type="text" name="message" placeholder="Message" ></textarea>
-          </div>
-          <button type="submit">Send Message</button>
-        </form>
+            <button type="submit">Send Message</button>
+          </form>
+        </div>
       </div>
     </div>
   </div>
@@ -122,7 +126,7 @@
           </div>
         </div>
         <div class="middle">
-          <img src="./assets/Humpty-screen@2x.png" alt="Humpty-ScreenShot" >
+          <img src="./assets/Humptys-screen.png" alt="Humpty-ScreenShot" >
         </div>
         <div class="bottom">
             <div class="bottom-content">
@@ -130,8 +134,8 @@
                   <h1>Humpty Dumplings</h1>
                   <p>Resturant Website</p>
                 </div>
-                <p>Website deigned and built for a local restaurant using React.</p>
-                <p>Technologies used:</p>
+                <p>Website designed and built for a local restaurant using React.</p>
+                <p class="extra-padding">Technologies used:</p>
                 <div class="bottom-tech">
                   <span class="tech">React</span>
                   <span class="tech">JavaScript</span>
@@ -163,7 +167,7 @@
                        <p>Recipe Manager App</p>
                     </div>
                      <p>This application allows users to add their own recipes and follow their desired meal plan. This app is built using React-Redux with Firebase Authentication and Storage.</p>
-                     <p>Technologies used:</p>
+                     <p class="extra-padding">Technologies used:</p>
                      <div class="bottom-tech">
                         <span class="tech">React</span>
                         <span class="tech">JavaScript</span>
@@ -189,7 +193,7 @@
               </div>
             </div>
             <div class="middle">
-              <img src="./assets/Feedr-screen@2x.png" alt="Feedr-ScreenShot" >
+              <img src="./assets/Feedr-screen.png" alt="Feedr-ScreenShot" >
             </div>
             <div class="bottom">
                 <div class="bottom-content">
@@ -198,7 +202,7 @@
                        <p>Recipe Manager App</p>
                     </div>
                      <p>This application allows users to search for recipes. This app is built using React and Edamam's Recipe Search API</p>
-                     <p>Technologies used:</p>
+                     <p class="extra-padding">Technologies used:</p>
                      <div class="bottom-tech">
                         <span class="tech">React</span>
                         <span class="tech">JavaScript</span>
@@ -223,7 +227,7 @@
               </div>
             </div>
             <div class="middle">
-              <img src="./assets/Meteor-screen@2x.png" alt="Meteor-ScreenShot" >
+              <img src="./assets/Meteor-screen.png" alt="Meteor-ScreenShot" >
             </div>
             <div class="bottom">
                 <div class="bottom-content">
@@ -231,8 +235,8 @@
                        <h1>Meteor</h1>
                        <p>Weather App</p>
                     </div>
-                     <p>This app allows a user to track weather all around the world. It was build in React and uses Open Weather Maps API to get current weather conditions.</p>
-                     <p>Technologies used:</p>
+                     <p>This app allows a user to track weather all around the world. It was built in React and uses Open Weather Maps API to get current weather conditions.</p>
+                     <p class="extra-padding">Technologies used:</p>
                      <div class="bottom-tech">
                          <span class="tech">React</span>
                          <span class="tech">JavaScript</span>

@@ -42,6 +42,20 @@ $fontLexend: "Lexend Zetta", sans-serif;
     font-size: 12px;
   }
 }
+@mixin navbar {
+  width: 100%;
+  background-color: $grey;
+  display: flex;
+  justify-content: center;
+  color: $white;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: $fontLexend;
+  @include mQ(600px, 320px) {
+    font-size: 14px;
+  }
+}
 @mixin tabsWrapper {
   width: 100%;
   height: 40vh;
@@ -49,12 +63,19 @@ $fontLexend: "Lexend Zetta", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
   @include mQ(1024px, 601px) {
     height: 50vh;
   }
   @include mQ(600px, 320px) {
     height: 65vh;
   }
+}
+@mixin tabsContent {
+  height: 100%;
+  display: flex;
+  padding: 20px 0px;
+  overflow-y: scroll;
 }
 @mixin tool {
   display: flex;
@@ -71,9 +92,12 @@ $fontLexend: "Lexend Zetta", sans-serif;
   color: $white;
 }
 
+//---->LAYOUTS<----//
+
 //UNTOUCHED Navbar --> Hero/Nav Styling
 .portfolio-wrapper {
-  height: 90%;
+  height: 90vh;
+  overflow-y: scroll;
   @include centerPortfolio();
   .portfolio-logo {
     width: 394px;
@@ -110,12 +134,17 @@ $fontLexend: "Lexend Zetta", sans-serif;
 }
 .navbar-wrapper {
   width: 100%;
-  height: 10%;
+  height: 10vh;
+  .navbar {
+    @include navbar();
+    height: 100%;
+  }
 }
 
 //TOUCHED Navbar --> Hero/Nav Styling
 .portfolio-wrapper-two {
   height: 50%;
+  overflow-y: scroll;
   @include centerPortfolio();
   @include mQ(1024px, 601px) {
     height: 40%;
@@ -177,25 +206,26 @@ $fontLexend: "Lexend Zetta", sans-serif;
 }
 .navbar-wrapper-two {
   width: 100%;
-  height: 50%;
+  height: 50vh;
+  overflow: scroll;
+  .navbar {
+    @include navbar();
+    height: 10vh;
+  }
+  @include mQ(1024px, 601px) {
+    height: 60vh;
+  }
+  @include mQ(600px, 320px) {
+    height: 75vh;
+  }
 }
 
-//-NAVBAR-//
+//NABVAR UNIVERSAL//
 .navbar {
-  width: 100%;
-  height: 100%;
-  background-color: $grey;
-  display: flex;
-  justify-content: center;
-  color: $white;
-  font-size: 16px;
-  text-transform: uppercase;
-  opacity: 1;
-  font-family: $fontLexend;
   div {
     width: 478px;
     display: flex;
-    margin-top: 30px;
+    align-items: center;
     justify-content: center;
     ul {
       list-style-type: none;
@@ -215,12 +245,14 @@ $fontLexend: "Lexend Zetta", sans-serif;
       width: 320px;
     }
   }
-  @include mQ(600px, 320px) {
-    font-size: 14px;
-  }
 }
 
+
+
+
 //---->TABS<---//
+
+
 //--ABOUT--//
 .about {
   display: none;
@@ -232,8 +264,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
   .about-content {
     width: 645px;
-   // height: 214px;
-    display: flex;
+    @include tabsContent();
     flex-direction: column;
     align-items: center;
     font-family: $fontBarlow;
@@ -250,7 +281,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
       @include mQ(600px, 320px) {
         width: 320px;
       }
-      img{
+      img {
         width: 30px;
         height: 30px;
         margin: 10px 5px;
@@ -262,10 +293,8 @@ $fontLexend: "Lexend Zetta", sans-serif;
         width: 320px;
       }
     }
-
     .about-toolbelt {
       width: 600px;
-      height: 108px;
       display: flex;
       flex-wrap: wrap;
       @include mQ(600px, 320px) {
@@ -279,46 +308,51 @@ $fontLexend: "Lexend Zetta", sans-serif;
     }
   }
 }
+
+
 //--PROJECTS--//
 .projects {
   display: none;
 }
 .projects-wrapper {
   @include tabsWrapper();
-  .projects {
-    width: 600px;
-    height: 260px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    flex-wrap: wrap;
-    cursor: pointer;
-    @include mQ(600px, 320px) {
-      width: 320px;
+  .projects-content {
+    @include tabsContent();
+    .projects {
+      width: 600px;
       height: 260px;
-    }
-    .project {
-      width: 295px;
-      height: 125px;
-      border-radius: 10px;
-      background-color: $grey;
-      display: flex;
-      justify-content: center;
+      padding-bottom: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
       align-items: center;
-      margin: 0px 10px 10px 0px;
+      justify-items: center;
+      flex-wrap: wrap;
+      cursor: pointer;
       @include mQ(600px, 320px) {
-        width: 155px;
-        height: 125px;
+        width: 320px;
       }
-      &:hover {
-        background-color: $black;
+      .project {
+        width: 295px;
+        height: 125px;
+        border-radius: 10px;
+        background-color: $grey;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 10px 10px 0px;
+        @include mQ(600px, 320px) {
+          width: 155px;
+          height: 125px;
+        }
+        &:hover {
+          background-color: $black;
+        }
       }
     }
   }
 }
-// --> (change display on project hover)
+// ...project extended --> (change display on project hover)
 .hover {
   display: none;
 }
@@ -329,7 +363,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   background-color: $black;
   text-align: left;
   width: 100%;
-  padding-left: 25px;
+  padding:0px 25px;
   h1 {
     font-size: 20px;
     text-transform: uppercase;
@@ -349,52 +383,81 @@ $fontLexend: "Lexend Zetta", sans-serif;
 .project:hover img {
   display: none;
 }
+
+
 //--CONTACT--//
 .contact {
   display: none;
 }
 .contact-wrapper {
   @include tabsWrapper();
-  form {
-    color: $white;
-    font-size: 16px;
-    font-family: $fontBarlow;
-    width: 600px;
-    height: 275px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    @include mQ(600px, 320px) {
-      width: 295px;
-      height: auto;
-    }
-    p {
-      padding-bottom: 24px;
-    }
-    .form-contents {
+  .contact-content {
+    @include tabsContent();
+    form {
+      color: $white;
+      font-size: 16px;
+      font-family: $fontBarlow;
       width: 600px;
-      height: 160px;
+      height: 275px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       @include mQ(600px, 320px) {
         width: 295px;
-        height: 200px;
       }
-      .form-inputs {
+      p {
+        padding-bottom: 24px;
+      }
+      .form-contents {
         width: 600px;
+        height: 160px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         @include mQ(600px, 320px) {
           width: 295px;
-          flex-direction: column;
+          height: 200px;
         }
-        input {
-          width: 295px;
-          height: 50px;
+        .form-inputs {
+          width: 600px;
+          display: flex;
+          justify-content: space-between;
+          @include mQ(600px, 320px) {
+            width: 295px;
+            flex-direction: column;
+          }
+          input {
+            width: 295px;
+            height: 50px;
+            background-color: $grey;
+            border: none;
+            outline: none;
+            text-indent: 5px;
+            &::placeholder {
+              @include placeholder();
+              opacity: 0.5;
+            }
+            &[type="text"] {
+              @include placeholder();
+            }
+            &[type="email"] {
+              @include placeholder();
+            }
+          }
+        }
+        .margin {
+          @include mQ(600px, 320px) {
+            margin-bottom: 12px;
+          }
+        }
+        textarea {
+          width: 600px;
+          height: 100px;
           background-color: $grey;
           border: none;
           outline: none;
+          resize: none;
+          margin-top: 12px;
           text-indent: 5px;
           &::placeholder {
             @include placeholder();
@@ -403,55 +466,29 @@ $fontLexend: "Lexend Zetta", sans-serif;
           &[type="text"] {
             @include placeholder();
           }
-          &[type="email"] {
-            @include placeholder();
+          @include mQ(600px, 320px) {
+            width: 295px;
+            height: 80px;
           }
         }
       }
-      .margin {
-        @include mQ(600px, 320px) {
-          margin-bottom: 12px;
-        }
-      }
-      textarea {
-        width: 600px;
-        height: 100px;
-        background-color: $grey;
+      button {
+        width: 225px;
+        height: 60px;
+        background: $lightBlue;
+        color: $white;
+        font-family: $fontBarlow;
+        font-size: 16px;
         border: none;
-        outline: none;
-        resize: none;
-        margin-top: 12px;
-        text-indent: 5px;
-        &::placeholder {
-          @include placeholder();
-          opacity: 0.5;
-        }
-        &[type="text"] {
-          @include placeholder();
-        }
+        align-self: center;
+        margin-top: 18px;
         @include mQ(600px, 320px) {
           width: 295px;
-          height: 80px;
         }
-      }
-    }
-    button {
-      width: 225px;
-      height: 60px;
-      background: $lightBlue;
-      color: $white;
-      font-family: $fontBarlow;
-      font-size: 16px;
-      border: none;
-      align-self: center;
-      margin-top: 18px;
-      @include mQ(600px, 320px) {
-        width: 295px;
       }
     }
   }
 }
-
 
 //--->MODAL<---//
 .modal {
@@ -462,7 +499,6 @@ $fontLexend: "Lexend Zetta", sans-serif;
   top: 0;
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 20px);
   overflow-y: auto;
   background-color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0.4);
@@ -471,10 +507,8 @@ $fontLexend: "Lexend Zetta", sans-serif;
     background-color: #fefefe;
     margin: 80px auto;
     width: 400px;
-    height: 631px;
     @include mQ(768px, 320px) {
       width: 380px;
-      height: 560px;
       margin: 50px auto;
     }
   }
@@ -484,19 +518,20 @@ $fontLexend: "Lexend Zetta", sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-content: center;
-    justify-items: center;
+    padding: 0px 20px;
     .top-logo {
+      justify-self: left;
       img {
-        width: 95px;
         height: 50px;
       }
     }
     .top-btn {
+      justify-self: flex-end;
       display: flex;
       align-content: center;
       button {
         width: 125px;
-        height: 40px;
+        height: 50px;
         border: none;
         color: $white;
         font-size: 16px;
@@ -516,10 +551,9 @@ $fontLexend: "Lexend Zetta", sans-serif;
   }
   .bottom {
     background-color: palevioletred;
-    height: 331px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    padding: 20px 20px 40px 20px;
     font-family: $fontBarlow;
     background-color: $white;
     font-size: 16px;
@@ -530,11 +564,16 @@ $fontLexend: "Lexend Zetta", sans-serif;
       width: 350px;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
       .bottom-title {
         p {
           opacity: 0.75;
+          padding-bottom: 20px;
         }
+      }
+      .extra-padding {
+        padding: 5px 0px 10px 0px;
+        font-weight: bold;
+        opacity: 0.75;
       }
       .bottom-tech {
         display: flex;
@@ -555,14 +594,16 @@ $fontLexend: "Lexend Zetta", sans-serif;
     font-size: 38px;
     font-weight: bold;
     position: absolute;
-    right: 30vw;
+    left: 65vw;
+    top: 2vh;
     &:hover {
       color: $white;
       text-decoration: none;
       cursor: pointer;
     }
     @include mQ(1024px, 320px) {
-      right: 50vw;
+      left: 50vw;
+      top: 1vh;
     }
   }
 }

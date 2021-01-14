@@ -1,5 +1,6 @@
 .portfolio-wrapper {
-  height: 90%;
+  height: 90vh;
+  overflow-y: scroll;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -71,11 +72,35 @@
 
 .navbar-wrapper {
   width: 100%;
-  height: 10%;
+  height: 10vh;
+}
+
+.navbar-wrapper .navbar {
+  width: 100%;
+  background-color: #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  opacity: 1;
+  font-family: "Lexend Zetta", sans-serif;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .navbar-wrapper .navbar {
+    font-size: 14px;
+  }
 }
 
 .portfolio-wrapper-two {
   height: 50%;
+  overflow-y: scroll;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -205,12 +230,12 @@
 
 .navbar-wrapper-two {
   width: 100%;
-  height: 50%;
+  height: 50vh;
+  overflow: scroll;
 }
 
-.navbar {
+.navbar-wrapper-two .navbar {
   width: 100%;
-  height: 100%;
   background-color: #333333;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -223,6 +248,25 @@
   text-transform: uppercase;
   opacity: 1;
   font-family: "Lexend Zetta", sans-serif;
+  height: 10vh;
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .navbar-wrapper-two .navbar {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  .navbar-wrapper-two {
+    height: 60vh;
+  }
+}
+
+@media screen and (max-width: 600px) and (min-width: 320px) {
+  .navbar-wrapper-two {
+    height: 75vh;
+  }
 }
 
 .navbar div {
@@ -230,7 +274,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -263,12 +309,6 @@
   }
 }
 
-@media screen and (max-width: 600px) and (min-width: 320px) {
-  .navbar {
-    font-size: 14px;
-  }
-}
-
 .about {
   display: none;
 }
@@ -286,6 +326,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 601px) {
@@ -310,9 +351,12 @@
 
 .about-wrapper .about-content {
   width: 645px;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 20px 0px;
+  overflow-y: scroll;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -362,7 +406,6 @@
 
 .about-wrapper .about-content .about-toolbelt {
   width: 600px;
-  height: 108px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,6 +457,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 601px) {
@@ -428,9 +472,19 @@
   }
 }
 
-.projects-wrapper .projects {
+.projects-wrapper .projects-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0px;
+  overflow-y: scroll;
+}
+
+.projects-wrapper .projects-content .projects {
   width: 600px;
   height: 260px;
+  padding-bottom: 10px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -447,13 +501,12 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .projects-wrapper .projects {
+  .projects-wrapper .projects-content .projects {
     width: 320px;
-    height: 260px;
   }
 }
 
-.projects-wrapper .projects .project {
+.projects-wrapper .projects-content .projects .project {
   width: 295px;
   height: 125px;
   border-radius: 10px;
@@ -471,13 +524,13 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .projects-wrapper .projects .project {
+  .projects-wrapper .projects-content .projects .project {
     width: 155px;
     height: 125px;
   }
 }
 
-.projects-wrapper .projects .project:hover {
+.projects-wrapper .projects-content .projects .project:hover {
   background-color: #000000;
 }
 
@@ -492,7 +545,7 @@
   background-color: #000000;
   text-align: left;
   width: 100%;
-  padding-left: 25px;
+  padding: 0px 25px;
 }
 
 .project:hover .hover h1 {
@@ -539,6 +592,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
 }
 
 @media screen and (max-width: 1024px) and (min-width: 601px) {
@@ -553,7 +607,16 @@
   }
 }
 
-.contact-wrapper form {
+.contact-wrapper .contact-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0px;
+  overflow-y: scroll;
+}
+
+.contact-wrapper .contact-content form {
   color: #ffffff;
   font-size: 16px;
   font-family: "Barlow", sans-serif;
@@ -572,17 +635,16 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form {
+  .contact-wrapper .contact-content form {
     width: 295px;
-    height: auto;
   }
 }
 
-.contact-wrapper form p {
+.contact-wrapper .contact-content form p {
   padding-bottom: 24px;
 }
 
-.contact-wrapper form .form-contents {
+.contact-wrapper .contact-content form .form-contents {
   width: 600px;
   height: 160px;
   display: -webkit-box;
@@ -598,13 +660,13 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form .form-contents {
+  .contact-wrapper .contact-content form .form-contents {
     width: 295px;
     height: 200px;
   }
 }
 
-.contact-wrapper form .form-contents .form-inputs {
+.contact-wrapper .contact-content form .form-contents .form-inputs {
   width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -615,7 +677,7 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form .form-contents .form-inputs {
+  .contact-wrapper .contact-content form .form-contents .form-inputs {
     width: 295px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -624,7 +686,7 @@
   }
 }
 
-.contact-wrapper form .form-contents .form-inputs input {
+.contact-wrapper .contact-content form .form-contents .form-inputs input {
   width: 295px;
   height: 50px;
   background-color: #333333;
@@ -633,53 +695,53 @@
   text-indent: 5px;
 }
 
-.contact-wrapper form .form-contents .form-inputs input::-webkit-input-placeholder {
+.contact-wrapper .contact-content form .form-contents .form-inputs input::-webkit-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents .form-inputs input:-ms-input-placeholder {
+.contact-wrapper .contact-content form .form-contents .form-inputs input:-ms-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents .form-inputs input::-ms-input-placeholder {
+.contact-wrapper .contact-content form .form-contents .form-inputs input::-ms-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents .form-inputs input::placeholder {
+.contact-wrapper .contact-content form .form-contents .form-inputs input::placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents .form-inputs input[type="text"] {
+.contact-wrapper .contact-content form .form-contents .form-inputs input[type="text"] {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
 }
 
-.contact-wrapper form .form-contents .form-inputs input[type="email"] {
+.contact-wrapper .contact-content form .form-contents .form-inputs input[type="email"] {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form .form-contents .margin {
+  .contact-wrapper .contact-content form .form-contents .margin {
     margin-bottom: 12px;
   }
 }
 
-.contact-wrapper form .form-contents textarea {
+.contact-wrapper .contact-content form .form-contents textarea {
   width: 600px;
   height: 100px;
   background-color: #333333;
@@ -690,48 +752,48 @@
   text-indent: 5px;
 }
 
-.contact-wrapper form .form-contents textarea::-webkit-input-placeholder {
+.contact-wrapper .contact-content form .form-contents textarea::-webkit-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents textarea:-ms-input-placeholder {
+.contact-wrapper .contact-content form .form-contents textarea:-ms-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents textarea::-ms-input-placeholder {
+.contact-wrapper .contact-content form .form-contents textarea::-ms-input-placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents textarea::placeholder {
+.contact-wrapper .contact-content form .form-contents textarea::placeholder {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
   opacity: 0.5;
 }
 
-.contact-wrapper form .form-contents textarea[type="text"] {
+.contact-wrapper .contact-content form .form-contents textarea[type="text"] {
   font-family: "Barlow", sans-serif;
   font-size: 16px;
   color: #ffffff;
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form .form-contents textarea {
+  .contact-wrapper .contact-content form .form-contents textarea {
     width: 295px;
     height: 80px;
   }
 }
 
-.contact-wrapper form button {
+.contact-wrapper .contact-content form button {
   width: 225px;
   height: 60px;
   background: #0075ed;
@@ -746,7 +808,7 @@
 }
 
 @media screen and (max-width: 600px) and (min-width: 320px) {
-  .contact-wrapper form button {
+  .contact-wrapper .contact-content form button {
     width: 295px;
   }
 }
@@ -759,7 +821,6 @@
   top: 0;
   width: 100%;
   height: 100%;
-  max-height: calc(100vh - 20px);
   overflow-y: auto;
   background-color: black;
   background-color: rgba(0, 0, 0, 0.4);
@@ -771,13 +832,11 @@
   background-color: #fefefe;
   margin: 80px auto;
   width: 400px;
-  height: 631px;
 }
 
 @media screen and (max-width: 768px) and (min-width: 320px) {
   .modal .modal-content {
     width: 380px;
-    height: 560px;
     margin: 50px auto;
   }
 }
@@ -791,15 +850,20 @@
       grid-template-columns: 1fr 1fr;
   -ms-flex-line-pack: center;
       align-content: center;
-  justify-items: center;
+  padding: 0px 20px;
+}
+
+.modal .top .top-logo {
+  -ms-grid-column-align: left;
+      justify-self: left;
 }
 
 .modal .top .top-logo img {
-  width: 95px;
   height: 50px;
 }
 
 .modal .top .top-btn {
+  justify-self: flex-end;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -809,7 +873,7 @@
 
 .modal .top .top-btn button {
   width: 125px;
-  height: 40px;
+  height: 50px;
   border: none;
   color: #ffffff;
   font-size: 16px;
@@ -830,14 +894,11 @@
 
 .modal .bottom {
   background-color: palevioletred;
-  height: 331px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding: 20px 20px 40px 20px;
   font-family: "Barlow", sans-serif;
   background-color: #ffffff;
   font-size: 16px;
@@ -858,12 +919,16 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
 }
 
 .modal .bottom .bottom-content .bottom-title p {
+  opacity: 0.75;
+  padding-bottom: 20px;
+}
+
+.modal .bottom .bottom-content .extra-padding {
+  padding: 5px 0px 10px 0px;
+  font-weight: bold;
   opacity: 0.75;
 }
 
@@ -907,7 +972,8 @@
   font-size: 38px;
   font-weight: bold;
   position: absolute;
-  right: 30vw;
+  left: 65vw;
+  top: 2vh;
 }
 
 .modal .close:hover {
@@ -918,7 +984,8 @@
 
 @media screen and (max-width: 1024px) and (min-width: 320px) {
   .modal .close {
-    right: 50vw;
+    left: 50vw;
+    top: 1vh;
   }
 }
 /*# sourceMappingURL=main.css.map */
