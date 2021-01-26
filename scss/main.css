@@ -101,6 +101,8 @@
 .portfolio-wrapper-two {
   height: 50%;
   overflow-y: scroll;
+  -webkit-transition: 1s;
+  transition: 1s;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;

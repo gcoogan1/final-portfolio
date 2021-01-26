@@ -146,6 +146,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
 .portfolio-wrapper-two {
   height: 50%;
   overflow-y: scroll;
+  transition: 1s;
   @include centerPortfolio();
   @include mQ(1024px, 601px) {
     height: 40%;
