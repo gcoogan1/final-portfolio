@@ -1,6 +1,7 @@
 //--VARIABLES--//
 const hero = document.getElementById("hero");
 const nav = document.getElementById("nav");
+const id = document.getElementById("logo");
 const about = document.getElementById("about");
 const projects = document.getElementById("projects");
 const tabs = document.getElementById("tabs");
@@ -19,6 +20,12 @@ function changeLayout() {
   hero.classList.add("portfolio-wrapper-two");
   nav.classList.remove("navbar-wrapper");
   nav.classList.add("navbar-wrapper-two")
+}
+function closeLayout() {
+  hero.classList.add("portfolio-wrapper");
+  hero.classList.remove("portfolio-wrapper-two");
+  nav.classList.add("navbar-wrapper");
+  nav.classList.remove("navbar-wrapper-two")
 }
 //Tab Functions
 function showAbout() {
