@@ -702,7 +702,7 @@
   background-color: #333333;
   border: none;
   outline: none;
-  text-indent: 5px;
+  text-indent: 10px;
 }
 
 .contact-wrapper .contact-content form .form-contents .form-inputs input::-webkit-input-placeholder {
@@ -754,12 +754,13 @@
 .contact-wrapper .contact-content form .form-contents textarea {
   width: 600px;
   height: 100px;
+  padding: 10px 0px;
   background-color: #333333;
   border: none;
   outline: none;
   resize: none;
   margin-top: 12px;
-  text-indent: 5px;
+  text-indent: 10px;
 }
 
 .contact-wrapper .contact-content form .form-contents textarea::-webkit-input-placeholder {
@@ -822,6 +823,10 @@
     width: 295px;
     padding: 10px;
   }
+}
+
+.contact-wrapper .contact-content form button:hover {
+  background: #026bd4;
 }
 
 .modal {

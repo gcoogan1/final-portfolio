@@ -429,7 +429,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
             background-color: $grey;
             border: none;
             outline: none;
-            text-indent: 5px;
+            text-indent: 10px;
             &::placeholder {
               @include placeholder();
               opacity: 0.5;
@@ -450,12 +450,13 @@ $fontLexend: "Lexend Zetta", sans-serif;
         textarea {
           width: 600px;
           height: 100px;
+          padding: 10px 0px;
           background-color: $grey;
           border: none;
           outline: none;
           resize: none;
           margin-top: 12px;
-          text-indent: 5px;
+          text-indent: 10px;
           &::placeholder {
             @include placeholder();
             opacity: 0.5;
@@ -482,6 +483,9 @@ $fontLexend: "Lexend Zetta", sans-serif;
         @include mQ(600px, 320px) {
           width: 295px;
           padding: 10px;
+        }
+        &:hover{
+          background: #026bd4;
         }
       }
     }
