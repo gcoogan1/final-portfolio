@@ -340,6 +340,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   .projects-content {
     @include tabsContent();
     justify-content: center;
+    align-items: center;
     .projects {
       width: 600px;
       height: 260px;
