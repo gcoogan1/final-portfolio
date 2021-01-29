@@ -1,6 +1,9 @@
 //VARIABLES
 $white: #ffffff;
 $offWhite: #e3e3e3;
+$darkPink: #8d586a;
+$lightPink: #c099a9;
+$offPink:#A47988;
 $deepBlue: #00073b;
 $lightBlue: #0075ed;
 $darkGrey: #1f1f1f;
@@ -32,6 +35,25 @@ $fontLexend: "Lexend Zetta", sans-serif;
   justify-content: center;
   background-color: $deepBlue;
 }
+@mixin glow {
+  background: 50% 100% / 50% 50% no-repeat
+    radial-gradient(ellipse at bottom, #fff, transparent, transparent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: reveal 3000ms ease-in-out forwards 200ms, glow 2500ms linear;
+
+  @keyframes reveal {
+    100% {
+      background-size: 300% 300%;
+    }
+  }
+  @keyframes glow {
+    40% {
+      text-shadow: 0 0 8px #fff;
+    }
+  }
+}
 @mixin h6Portfolio {
   font-family: $fontLexend;
   font-size: 16px;
@@ -44,7 +66,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
 }
 @mixin navbar {
   width: 100%;
-  background-color: $grey;
+  background-color: $darkPink;
   display: flex;
   justify-content: center;
   color: $white;
@@ -59,7 +81,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
 @mixin tabsWrapper {
   width: 100%;
   height: 40vh;
-  background-color: $darkGrey;
+  background-color: $lightPink;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -123,12 +145,14 @@ $fontLexend: "Lexend Zetta", sans-serif;
       h2 {
         font-family: $fontBely;
         font-size: 40px;
+        @include glow();
         @include mQ(600px, 320px) {
           font-size: 36px;
         }
       }
       h6 {
         @include h6Portfolio();
+        @include glow();
       }
     }
   }
@@ -300,7 +324,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
       }
       .tool {
         padding: 14px 25px 14px;
-        background-color: $grey;
+        background-color: $darkPink;
         @include tool();
       }
     }
@@ -334,7 +358,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
         width: 295px;
         height: 125px;
         border-radius: 10px;
-        background-color: $grey;
+        background-color: $darkPink;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -344,7 +368,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
           height: 125px;
         }
         &:hover {
-          background-color: $black;
+          background-color: $deepBlue;
         }
       }
     }
@@ -358,7 +382,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
   display: block;
   color: $white;
   font-family: $fontBarlow;
-  background-color: $black;
+  background-color: $deepBlue;
   text-align: left;
   width: 100%;
   padding: 0px 25px;
@@ -426,7 +450,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
           input {
             width: 295px;
             height: 50px;
-            background-color: $grey;
+            background-color: $offPink;
             border: none;
             outline: none;
             text-indent: 10px;
@@ -451,7 +475,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
           width: 600px;
           height: 100px;
           padding: 10px 0px;
-          background-color: $grey;
+          background-color: $offPink;
           border: none;
           outline: none;
           resize: none;
@@ -473,7 +497,7 @@ $fontLexend: "Lexend Zetta", sans-serif;
       button {
         width: 225px;
         height: 60px;
-        background: $lightBlue;
+        background: $deepBlue;
         color: $white;
         font-family: $fontBarlow;
         font-size: 16px;
@@ -484,8 +508,8 @@ $fontLexend: "Lexend Zetta", sans-serif;
           width: 295px;
           padding: 10px;
         }
-        &:hover{
-          background: #026bd4;
+        &:hover {
+          border-radius: 10px;
         }
       }
     }
@@ -538,11 +562,10 @@ $fontLexend: "Lexend Zetta", sans-serif;
     width: 400px;
     @include mQ(768px, 320px) {
       width: 380px;
-      
     }
   }
   .top {
-    background-color: $offGrey;
+    background-color: $deepBlue;
     height: 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
